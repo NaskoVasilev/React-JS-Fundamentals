@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book library</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/dropDownMenu.css">
+    <!--<script src="../../node_modules/jquery/dist/jquery.min.js"></script>-->
+    <!--<script src="js/notify.js"></script>-->
+</head>
+
+<body>
+    <header>
+        <nav id="main-menu">
+            <ul>
+                {{#if currentUser}}
+                    <li id="menu" class="active has-sub"><a href="#"><span>Menu</span></a>
+                        <ul>
+                            {{#if isAdmin}}
+                                <li class="has-sub"><a href="/admin/get/user/books"><span>Find user</span></a></li>
+                                <li class="has-sub"><a href="/book/create">Create New Book</a></li>
+                                <li class="has-sub"><a href="/admin/takenBooks">Taken books</a></li>
+                                <li class="has-sub"><a href="/admin/expiredBooks">Expired books</a></li>
+                                <li class="has-sub"><a href="/admin/notifyUser">Notify user</a></li>
+                                <li class="has-sub"><a href="/admin/users">Users</a></li>
+                            {{else}}
+                                <li class="has-sub"><a href="/user/takenBooks"><span>Taken books</span></a></li>
+                                <li class="has-sub"><a href="/user/favouriteBooks"><span>Favourite books</span></a></li>
+                                <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
+                                <li><a href="/user/notification/all">Notifications</a></li>
+                            {{/if}}
+                        </ul>
+                    </li>
+                {{/if}}
+                <li><a href="/"><span>Home</span></a></li>
+                {{#if currentUser}}
+                    <li><span>Welcome, {{currentUser.username}}!</span></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/users/register">Register</a></li>
+                {{/if}}
+                <li><a href="/book/all">Books</a></li>
+                <li id="search-from">
+                    <form method="post" action="/book/search">
+                        <input type="submit" value="Search">
+                        <input type="text" name="tags">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        {{#if error}}
+            <div id="errorBox">
+                <h3>{{error}}</h3>
+            </div>
+        {{/if}}
+        {{#if info}}
+            <div id="infoBox">
+                <h3>{{info}}</h3>
+            </div>
+        {{/if}}
+        <main>
+            {{{body}}}
+        </main>
+        <!--<footer>-->
+            <!--Book library 2019-->
+        <!--</footer>-->
+    </div>
+</body>
+</html>

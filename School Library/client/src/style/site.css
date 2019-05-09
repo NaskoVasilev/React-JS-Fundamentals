@@ -1,0 +1,610 @@
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #5d89a1;
+}
+
+a:hover {
+    color: black;
+}
+
+body {
+    text-align: center;
+}
+
+body > div {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.logo {
+    width: 128px;
+    height: 128px;
+}
+
+article {
+    padding: 20px;
+}
+
+.controls a{
+    margin-right: 10px;
+}
+
+.title {
+    width: 100%;
+}
+
+article>p {
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #5d89a1;
+    color: white;
+}
+
+/*Forms css*/
+
+#login-form{
+    background-color: #56baed;;
+}
+#login-form a {
+    color: #92badd;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#login-form h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 40px 8px 10px 8px;
+    color: #cccccc;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+#formContent {
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+#login-form h2.inactive {
+    color: #cccccc;
+}
+
+#login-form h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.form input[type=button], .form input[type=submit], .form input[type=reset]  {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.from input[type=button]:hover, .form input[type=submit]:hover, .form input[type=reset]:hover  {
+    background-color: #39ace7;
+}
+
+.form input[type=button]:active, .form input[type=submit]:active, .form input[type=reset]:active  {
+    transform: scale(0.95);
+}
+
+.form input[type=text],textarea, .form input[type=date], .form select, .form input[type=password], .form input[type=number] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.form input[type=text]:focus,.form textarea:focus, select:focus,
+.form input[type=password]:focus, .form input[type=number]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.form input[type=text]::placeholder, .form input[type=password]::placeholder, .form input[type=number]::placeholder
+,.form textarea::placeholder, .form select::placeholder{
+    color: rgba(43, 39, 40, 0.96);
+}
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+    opacity:0;
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards;
+    animation-duration:1s;
+}
+
+.fadeIn.first {
+    animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+    animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+    animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+    animation-delay: 1s;
+}
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+    width: 100%;
+}
+
+#login-form *:focus {
+    outline: none;
+}
+
+#icon {
+    width:60%;
+}
+
+#login-form * {
+    box-sizing: border-box;
+}
+/*End form css*/
+
+/*Input type file css*/
+input[type=file]{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+}
+
+input[type = file] + label{
+    color: white;
+    background-color: #3BACE7;
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 5px 0;
+    width: 57%;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+input[type = file]:focus + label,
+input[type = file] + label:hover {
+    background-color: red;
+}
+
+/*Taken books table css*/
+#taken-books{
+    margin-top: 20px;
+}
+
+#taken-books th{
+    background: #3FA338;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 1px solid black;
+}
+
+#taken-books table{
+    margin: 0 auto;
+    color: black;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+#taken-books tr{
+    border: 1px solid black;
+}
+
+#taken-books td{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+#taken-books input[type=submit]{
+    background: none;
+    border: none;
+    font-size: 15px;
+}
+
+#taken-books tr:nth-child(even){
+    background: #b3f554;
+}
+
+#taken-books tr:nth-child(odd){
+    background: #3FA338;
+    color: white;
+}
+
+#taken-books tr:nth-child(odd) input[type=submit]{
+    color: white;
+}
+
+/*Botton css*/
+.button{
+    background-color: greenyellow;
+    padding: 10px 20px;
+    border: none;
+    color: black;
+    font-size: 15px;
+}
+
+.button:hover{
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+div#errorBox{
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*Home page*/
+#home{
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    height: 600px
+}
+
+#home > h1{
+    font-size: 50px;
+    color: #ffffff;
+    padding-top: 100px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+#home > p{
+    padding: 50px;
+    font-size: 45px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+#home > img{
+    width: 250px;
+    height: 250px;
+}
+
+#search-from{
+    padding-top: 5px;
+    margin: 0 20px;
+}
+
+#search-from form > input[type=text]{
+    background:  none;
+    border: 1px solid green;
+    color: white;
+    padding: 5px;
+}
+
+#search-from input[type=submit]{
+    background: green;
+    padding: 5px;
+    border: 1px solid #fffdfd;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+}
+
+#search-from:hover{
+    background: #1E1E1E;
+}
+
+#all-books h2{
+    margin: 20px;
+}
+
+#all-books .spacer{
+    text-align: center;
+}
+
+.book-info h3{
+    font-size: 15px;
+}
+
+.spacer .book{
+    padding: 0;
+    width: 250px;
+    display: inline-block;
+    box-shadow: 0 4px 32px 0 rgba(125,168,161,1);
+    margin: 20px;
+    text-align: left;
+    height: 470px;
+    vertical-align: top;
+}
+
+.spacer .book figure{
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.spacer .book img{
+    width: 100%;
+    height: 100%;
+}
+
+.spacer .book-info{
+    padding-left: 15px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+h2{
+    padding-top: 20px;
+}
+
+.button-container{
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.button-container a:hover{
+    background-color: deepskyblue;
+}
+
+.button-container{
+    padding-top: 10px;
+}
+
+#userInfo{
+    padding-top: 20px;
+    border-bottom: 1px solid green;
+    font-weight:  bold;
+    color: #3fa338;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+/*Notification*/
+#notifications h2{
+    text-align: center;
+}
+
+#notifications article{
+    width: 95%;
+    margin: 10px auto;
+    border: 2px solid lightgray;
+    background-color: #fff6ef;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#notifications article p{
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#notifications article a{
+    float: right;
+}
+#latest-books{
+    background-color: #ebe6ee;
+}
+
+#latest-books article{
+    background-color: white;
+}
+
+/*Book details*/
+.book-details{
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.book-details .float-right{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.book-details .float-left{
+    display: inline-block;
+    width: 30%;
+}
+
+.book-details .float-left h2{
+    font-size: 30px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.book-details .float-left figure{
+    width: 90%;
+}
+
+.book-details .float-left img{
+    width: 90%;
+}
+
+.book-details .float-left .controls{
+    padding-top: 10px;
+}
+
+.book-details .float-left .controls a{
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.book-details .float-left .controls a:hover{
+    color: #74ad1f;
+}
+
+.book-details .float-right{
+    padding-left: 30px;
+    display: inline-block;
+    width: 40%;
+}
+
+.book-details .float-right .buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-details .float-right .buttons a{
+    margin-bottom: 20px;
+    width: 220px;
+}
+
+.book-details .float-right .buttons a:hover{
+    background-color: #3FA338;
+}
+
+.book-details .float-right article{
+    line-height: 35px;
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+
+.button{
+    color: black;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.button:hover{
+    color: white;
+}
+
+.green{
+    background-color: #3FA338;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: #40b7ff
+}
+
+.yellow{
+    background-color: greenyellow;
+}
+
+input[type=submit]{
+    outline: none;
+}
+

@@ -1,0 +1,17 @@
+<div class="wrapper fadeInDown" id="register-form">
+    <div id="formContent">
+        <h2 class="active">Edit book!</h2>
+
+        <form method="post" class="form" enctype="multipart/form-data">
+            <input type="text" class="fadeIn second" name="title" value="{{title}}" placeholder="Title">
+            <input type="text" class="fadeIn second" name="author" value="{{author}}" placeholder="Author">
+            <input type="text" class="fadeIn second" name="genre" value="{{genre}}" placeholder="Genre">
+            <input type="text" class="fadeIn third" name="publisher" value="{{publisher}}" placeholder="Publisher">
+            <input type="text" class="fadeIn third" name="tags" value="{{tags}}" placeholder="Tags">
+            <textarea class="fadeIn third" name="description" placeholder="Description">{{description}}</textarea>
+            <input id="file" type="file" class="fadeIn third" name="image" accept=".jpg, .jpeg, .png">
+            <label for="file" class="fadeIn third">Choose photo</label>
+            <input type="submit" class="fadeIn fourth" value="Edit">
+        </form>
+    </div>
+</div>
